@@ -75,8 +75,11 @@ This project is a CPU scheduling simulator that supports various scheduling algo
   - Feedback Queue 2 with Increasing Quantum (FB-2i)
     - A feedback queue with increasing quantum times. Each subsequent priority level 
       has a quantum twice as long as the previous level.
+    
+  - ![image](https://github.com/garvit5555/CPU-Scheduling/assets/153619593/df2b0d22-0596-4f11-9f36-5d28b559741f)
+
 
 ## Author
   - Author
-    - Garvit(garvitjuneja@gmail.com)
+    - Garvit(garvitjuneja200@gmail.com)
       
