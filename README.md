@@ -13,7 +13,13 @@ This project is a CPU scheduling simulator that supports various scheduling algo
 ## Requirements
 - C++11 or later
 - Standard Template Library (STL)
+### Cloning the Repository
 
+- To clone the repository, use the following command:
+
+  ```bash
+  git clone https://github.com/garvit5555/CPU-Scheduling.git
+  cd CPU-Scheduling
 ## Compilation
 
 - To compile the code, use a C++ compiler such as `g++`. Below is an example     
