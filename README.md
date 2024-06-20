@@ -44,18 +44,21 @@ This project is a CPU scheduling simulator that supports various scheduling algo
 
 
 - Output
+  - Trace
   ```
-  P1: *****     
-  P2:  ***    
-  P3:   **
-
-- If the stats operation is chosen, the program will output the statistics of each     process. For example:
+  
+    P1: *****     
+    P2:  ***    
+    P3:   **
   ```
-  Process Arrival Burst Finish Turnaround Normalized Turnaround
-  P1      0      5     5      5          1.00
-  P2      1      3     8      7          2.33
-  P3      2      2     10     8          4.00
+  - Statistics
+  ```
+    Process Arrival Burst Finish Turnaround Normalized Turnaround
+    P1      0      3     3      3          1.00
+    P2      2      6     9      7          1.17
+    P3      4      4     13     9          2.25
 
+  
   
 ## Scheduling Algorithms
   - First-Come, First-Served (FCFS)
