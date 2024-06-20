@@ -1,53 +1,76 @@
-# CPU Scheduling Algorithms
+# CPU Scheduling Simulator
 
-This project implements various CPU scheduling algorithms in C++. It includes the following algorithms:
-- First-Come, First-Served (FCFS)
-- Shortest Job First (SJF) Non-Preemptive
-- Shortest Job First (SJF) Preemptive
-- Round Robin (RR)
-- Priority Scheduling Non-Preemptive
-- Priority Scheduling Preemptive
+This project is a CPU scheduling simulator that supports various scheduling algorithms. It allows users to input process details and simulate the scheduling to either trace the execution timeline or show statistics of the processes.
 
-## Features
+## Supported Scheduling Algorithms
+1. **First-Come, First-Served (FCFS)**
+2. **Shortest Process Next (SPN)**
+3. **Shortest Remaining Time (SRT)**
+4. **Highest Response Ratio Next (HRRN)**
+5. **Feedback Queue 1 (FB-1)**
+6. **Feedback Queue 2 with Increasing Quantum (FB-2i)**
 
-- Computes average waiting time and average turnaround time for each scheduling algorithm.
-- Compares the performance of each algorithm based on the average waiting time.
+## Requirements
+- C++11 or later
+- Standard Template Library (STL)
 
-## Prerequisites
+## Compilation
 
-Before you begin, ensure you have met the following requirements:
+- To compile the code, use a C++ compiler such as `g++`. Below is an example     
+  compilation command:
+  ```
+  g++ -std=c++11 -o cpu_scheduler cpu_scheduler.cpp
 
-- **C++ Compiler**: You need to have a C++ compiler installed on your machine. We recommend using g++.
-  - For Windows: You can use MinGW (Minimalist GNU for Windows).
-  - For Linux: g++ is usually pre-installed. If not, you can install it using your package manager (e.g., `sudo apt install g++`).
-  - For macOS: You can install g++ using Homebrew (`brew install gcc`).
-- **Make** (Optional): If you prefer using a Makefile for compilation, you need to have `make` installed.
-  - For Windows: Install MinGW and ensure `make` is included in your PATH.
-  - For Linux: `make` is usually pre-installed. If not, you can install it using your package manager (e.g., `sudo apt install make`).
-  - For macOS: You can install make using Homebrew (`brew install make`).
-- **Git**: You need to have Git installed if you want to clone the repository.
-  - For Windows: Download and install Git from the [official site](https://git-scm.com/download/win).
-  - For Linux: Git is usually pre-installed. If not, you can install it using your package manager (e.g., `sudo apt install git`).
-  - For macOS: You can install Git using Homebrew (`brew install git`).
-- **Editor**: A code editor or IDE of your choice (e.g., VS Code, CLion, or any other text editor).
+- Run the compiled executable and follow the prompts to enter the details of the   processes and choose a scheduling algorithm.
+  ```
+  ./cpu_scheduler
 
-### Clone the Repository
 
-  - To clone the repository, run the following command:
+- Example
+  ```
+  Enter the number of processes: 3
+  Enter process name, arrival time, and burst time for process 1: P1 0 5
+  Enter process name, arrival time, and burst time for process 2: P2 1 3
+  Enter process name, arrival time, and burst time for process 3: P3 2 2
+  Enter the last instant of simulation: 10
+  Enter the operation (trace/stats): trace
+  Enter the scheduling algorithm (FCFS, SPN, SRT, HRRN, FB-1, FB-2i): FCFS
 
-    ```
-    git clone https://github.com/garvit5555/CPU-Scheduling.git
-    cd CPU-Scheduling
-  - To compile the code, run the following command in the terminal:
-    ```
-    g++ -o scheduler scheduler.cpp
-  - To execute the program, use the following command:
-    ```
-    ./scheduler
-  - Input
-    - Number of processes.
-    - For each process, input the arrival time, burst time, and priority.
-    - Time quantum for Round Robin scheduling.
-  - Output
-    - The program will output the average waiting time and average turnaround time for each scheduling algorithm and indicate which algorithm 
-      has the minimum average waiting time.
+
+- Output
+  ```
+  P1: *****     
+  P2:  ***    
+  P3:   **
+
+- If the stats operation is chosen, the program will output the statistics of each     process. For example:
+  ```
+  Process Arrival Burst Finish Turnaround Normalized Turnaround
+  P1      0      5     5      5          1.00
+  P2      1      3     8      7          2.33
+  P3      2      2     10     8          4.00
+
+  
+## Scheduling Algorithms
+  - First-Come, First-Served (FCFS)
+    - Processes are scheduled in the order of their arrival times.
+
+  - Shortest Process Next (SPN)
+    - The process with the shortest burst time is selected next.
+
+  - Shortest Remaining Time (SRT)
+    - The process with the shortest remaining burst time is selected next.
+
+  - Highest Response Ratio Next (HRRN)
+    - The process with the highest response ratio is selected next.
+      Feedback Queue 1 (FB-1)
+    - A feedback queue with a fixed priority level where each process starts at the   highest priority.
+
+  - Feedback Queue 2 with Increasing Quantum (FB-2i)
+    - A feedback queue with increasing quantum times. Each subsequent priority level 
+      has a quantum twice as long as the previous level.
+
+## Author
+  - Author
+    - Garvit(garvitjuneja@gmail.com)
+      
