@@ -25,11 +25,11 @@ This project is a CPU scheduling simulator that supports various scheduling algo
 - To compile the code, use a C++ compiler such as `g++`. Below is an example     
   compilation command:
   ```
-  g++ -std=c++11 -o cpu_scheduler cpu_scheduler.cpp
+  g++ -std=c++11 -o main main.cpp
 
 - Run the compiled executable and follow the prompts to enter the details of the   processes and choose a scheduling algorithm.
   ```
-  ./cpu_scheduler
+  ./main
 
 
 - Example
